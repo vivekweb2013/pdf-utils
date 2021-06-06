@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <dimen name="distance_standard_dialog">8dp</dimen>
+    <dimen name="margin_top_about_dialog_info_text">10dp</dimen>
+    <dimen name="nav_header_height">180dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="size_rate_dialog_info">20sp</dimen>
+    <dimen name="size_tv_about_dialog_app_name">22sp</dimen>
+    <dimen name="size_tv_by_wirehall">12sp</dimen>
+    <dimen name="size_tv_dev_name">15sp</dimen>
+    <dimen name="size_tv_empty_list_message">15sp</dimen>
+    <dimen name="size_tv_privacy_policy">20sp</dimen>
+    <dimen name="size_tv_usage_notice">12sp</dimen>
+    <dimen name="size_tv_version">12sp</dimen>
+    <dimen name="standard_gap">15dp</dimen>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/distance_standard_dialog">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_tv_about_dialog_app_name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_about_dialog_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_tv_version" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/by_wirehall"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_tv_by_wirehall" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/label_dev_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_tv_dev_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top_about_dialog_info_text"
+        android:gravity="center"
+        android:text="@string/disclaimer"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_tv_usage_notice" />
+
+    <TextView
+        android:id="@+id/tv_privacy_policy_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/distance_standard_dialog"
+        android:gravity="center"
+        android:text="@string/privacy_policy"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_tv_privacy_policy" />
+
+    <Button
+        android:id="@+id/btn_about_dialog_close"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_standard_dialog"
+        android:background="?colorPrimaryVariant"
+        android:text="@string/close"
+        android:textColor="@color/white" />
+
+</LinearLayout>
