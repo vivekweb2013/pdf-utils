@@ -10,21 +10,13 @@ import android.net.Uri;
 import androidx.core.content.ContextCompat;
 import androidx.preference.PreferenceManager;
 
+import static com.wirehall.pdfutils.BuildConfig.BUG_REPORT_URL;
+import static com.wirehall.pdfutils.BuildConfig.PRIVACY_POLICY_URL;
+import static com.wirehall.pdfutils.BuildConfig.SOURCE_CODE_URL;
+import static com.wirehall.pdfutils.BuildConfig.TWITTER_ACCOUNT_APP_URL;
+import static com.wirehall.pdfutils.BuildConfig.TWITTER_ACCOUNT_WEB_URL;
+
 public class HelperUtils {
-  private static final String PRIVACY_POLICY_URL =
-      "https://sites.google.com/view/pdf-utils-privacy-policy";
-  private static final String SOURCE_CODE_URL = "https://github.com/vivekweb2013/pdf-utils";
-  private static final String BUG_REPORT_URL =
-      "https://github.com/vivekweb2013/pdf-utils/issues";
-
-  private static final String APP_PACKAGE_NAME = "com.wirehall.pdfutils";
-  private static final String PLAY_STORE_URL1 = "market://details?id=" + APP_PACKAGE_NAME;
-  private static final String PLAY_STORE_URL2 =
-      "https://play.google.com/store/apps/details?id=" + APP_PACKAGE_NAME;
-
-  private static final String USERNAME = "vivekweb2013";
-  private static final String TWITTER_ACCOUNT_URL1 = "twitter://user?screen_name=" + USERNAME;
-  private static final String TWITTER_ACCOUNT_URL2 = "https://twitter.com/" + USERNAME;
 
   private HelperUtils() {
     throw new IllegalStateException("Utility class");
@@ -54,16 +46,15 @@ public class HelperUtils {
   }
 
   public static void openPrivacyPolicyIntent(Context context) {
-    context.startActivity(
-        new Intent(Intent.ACTION_VIEW, Uri.parse(HelperUtils.PRIVACY_POLICY_URL)));
+    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(PRIVACY_POLICY_URL)));
   }
 
   public static void openSourceCodeIntent(Context context) {
-    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(HelperUtils.SOURCE_CODE_URL)));
+    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(SOURCE_CODE_URL)));
   }
 
   public static void openBugReportIntent(Context context) {
-    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(HelperUtils.BUG_REPORT_URL)));
+    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(BUG_REPORT_URL)));
   }
 
   public static void openRateIntent(Context context) {
@@ -71,9 +62,11 @@ public class HelperUtils {
     SharedPreferences.Editor editor = prefs.edit();
 
     try {
-      context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(HelperUtils.PLAY_STORE_URL1)));
+      context.startActivity(
+          new Intent(Intent.ACTION_VIEW, Uri.parse(BuildConfig.PLAY_STORE_APP_URL)));
     } catch (ActivityNotFoundException e) {
-      context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(HelperUtils.PLAY_STORE_URL2)));
+      context.startActivity(
+          new Intent(Intent.ACTION_VIEW, Uri.parse(BuildConfig.PLAY_STORE_WEB_URL)));
     }
 
     if (editor != null) {
@@ -84,9 +77,9 @@ public class HelperUtils {
 
   public static void openTwitterIntent(Context context) {
     try {
-      context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(TWITTER_ACCOUNT_URL1)));
+      context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(TWITTER_ACCOUNT_APP_URL)));
     } catch (Exception e) {
-      context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(TWITTER_ACCOUNT_URL2)));
+      context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(TWITTER_ACCOUNT_WEB_URL)));
     }
   }
 }
